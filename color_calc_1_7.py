@@ -1,10 +1,10 @@
 main_cycle = 1
 while main_cycle > 0:
-    check_paint_consumption = 0  # (контроль расхода краски)
-    screw = 0  # (саморезы)
-    screw_input = 1  # ввод открашеных саморезов по заявкам
-    screw_mem = []  # memory (хранение списка покрашенного)
-    #  расчет краски. Остаток на начало смены, сколько потрачено и  остаток в конце смены
+    check_paint_consumption = 0  
+    screw = 0  
+    screw_input = 1  
+    screw_mem = []  
+    #   Выясняем остаток краски на начало смены, сколько потрачено и  остаток в конце смены
     print ('---РАСЧЕТ КРАСКИ---')
     print ('Остаток с прошлой смены')
     paint_p = int(input())
@@ -12,7 +12,7 @@ while main_cycle > 0:
     paint_s = int(input())
     print ('Остаток краски на конец смены ')
     paint_l = int(input())
-    full_paint_consumption = (paint_p + paint_s) - paint_l  # подсчет краски
+    full_paint_consumption = (paint_p + paint_s) - paint_l  # сколько потрачено краски за смену
     #   расчет покрашеных саморезов
     print ('\n ---РАСЧЕТ САМОРЕЗОВ---')
     print ('Сколько покрашено саморезов по заявкам? \n Для завершения  введите 0')
@@ -34,9 +34,9 @@ while main_cycle > 0:
             if check_paint_consumption + paint_consumption  != full_paint_consumption:
                 paint_consumption = (full_paint_consumption - check_paint_consumption)
         check_paint_consumption = check_paint_consumption + paint_consumption  # контроль точности расхода.
-        print ("На ", tmp, "саморезов  затрачено ", int (paint_consumption), "краски \n ")
-    print ("\n Для нового ввода данных введите 1, для выхода 0")
+        print ('На ', tmp, 'саморезов  затрачено ', int (paint_consumption), 'краски \n ')
+    print ('\n Для нового ввода данных введите 1, для выхода 0')
     a = input()
     if a == "0":
-        print("Хорошего дня!")
+        print('Хорошего дня!')
         break
