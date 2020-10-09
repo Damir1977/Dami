@@ -1,8 +1,7 @@
-main_cycle = 1
-while main_cycle > 0:
+
+while True:
     check_paint_consumption = 0  
     screw = 0  
-    screw_input = 1  
     screw_mem = []  
     #   Выясняем остаток краски на начало смены, сколько потрачено и  остаток в конце смены
     print ('---РАСЧЕТ КРАСКИ---')
@@ -16,7 +15,7 @@ while main_cycle > 0:
     #   расчет покрашеных саморезов
     print ('\n ---РАСЧЕТ САМОРЕЗОВ---')
     print ('Сколько покрашено саморезов по заявкам? \n Для завершения  введите 0')
-    while screw_input != 0:
+    while True:
         screw_input = int(input())
         if screw_input <= 0:
             break
