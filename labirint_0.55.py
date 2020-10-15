@@ -102,7 +102,7 @@ while room <= len(map_l) - 1:
         room += 4
         continue
     if m == "ю" and s == 2 and item_list [0][1] == 250 :
-        map_l[room][s] == 1
+        map_l[room][s] = 1
         room += 4
         continue
     if m == "в" and e == 1:
